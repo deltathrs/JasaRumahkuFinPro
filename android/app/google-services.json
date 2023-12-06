@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "209814928851",
+    "firebase_url": "https://jasarumahkuauth-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "jasarumahkuauth",
+    "storage_bucket": "jasarumahkuauth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:209814928851:android:de2c4a2df2695acf4b0326",
+        "android_client_info": {
+          "package_name": "com.example.jasarumahku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzt5ME6omXzUPjosrFLcy7W2EjD4wY7DU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
