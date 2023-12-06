@@ -27,7 +27,7 @@ class _OnboardingState extends State<Onboarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 17, 0),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
       body: PageView.builder(
         controller: _controller,
         itemCount: contents.length,
@@ -169,7 +169,7 @@ class _OnboardingState extends State<Onboarding> {
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: currentIndex == index ? Colors.red : Color(0xFFCCBDBD),
+        color: currentIndex == index ? Colors.red : Color.fromARGB(255, 255, 255, 255),
       ),
     );
   }
