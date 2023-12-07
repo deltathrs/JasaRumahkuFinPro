@@ -43,7 +43,19 @@ class _OnboardingState extends State<Onboarding> {
                 children: [
                   Center(
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 50),
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Image.asset(
+                        contents[i].top,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 60),
                       child: Image.asset(
                         contents[i].image,
                       ),
@@ -169,7 +181,7 @@ class _OnboardingState extends State<Onboarding> {
       margin: EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: currentIndex == index ? Colors.red : Color.fromARGB(255, 255, 255, 255),
+        color: currentIndex == index ? Colors.red : Color.fromARGB(204, 120, 120, 120),
       ),
     );
   }
