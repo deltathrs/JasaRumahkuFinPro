@@ -28,5 +28,9 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<string>NSLocationWhenInUseUsageDescription</string>
+	<key>Display Location on Map</key>
+		<string>NSLocationAlwaysAndWhenInUseUsageDescription</string>
+	<key>Display Location on Map</key>
 </dict>
 </plist>

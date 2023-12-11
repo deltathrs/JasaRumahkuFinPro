@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jasarumahku/pages/auth_screen.dart';
-import 'package:jasarumahku/pages/content_model.dart';
+import 'package:jasarumahku/models/content_model.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);

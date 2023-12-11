@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:jasarumahku/pages/service_list/carry_stuff.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -148,7 +149,7 @@ class _HomePageState extends State<HomePage> {
             height: 10,
           ),
 
-          //Stuff Carry Section
+          // Stuff Carry Section
           Positioned(
             left: 21,
             top: 20,
@@ -158,10 +159,17 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  // Carry Section
                   Container(
-                    margin: EdgeInsets.fromLTRB(0, 0, 23, 0),
+                    margin: EdgeInsets.fromLTRB(0, 0, 16, 0),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const CarryFeature()),
+                        );
+                      },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
                       ),
@@ -171,6 +179,7 @@ class _HomePageState extends State<HomePage> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
+                            // Carry Icon
                             Container(
                               margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
                               padding: EdgeInsets.fromLTRB(17, 21, 17.04, 19),
@@ -206,6 +215,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                             ),
+                            // Carry Text
                             Container(
                               constraints: BoxConstraints(
                                 maxHeight: 37,
@@ -228,79 +238,95 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
 
-                  //Electrical Repair Section
+                  // Electrical Repair Section
                   Container(
-                    width: 62,
-                    height: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Container(
-                          margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
-                          padding: EdgeInsets.fromLTRB(13, 8, 14, 9),
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(12),
-                            gradient: LinearGradient(
-                              begin: Alignment(0, -1),
-                              end: Alignment(0.742, 1),
-                              colors: <Color>[
-                                Colors.red,
-                                Colors.yellow,
-                              ],
-                              stops: <double>[0.271, 1],
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0x3f000000),
-                                offset: Offset(2, 2),
-                                blurRadius: 2,
+                    margin: EdgeInsets.fromLTRB(0, 0, 23, 0),
+                    child: TextButton(
+                      onPressed: () {
+                        // Handle Electrical Repair button press
+                      },
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                      ),
+                      child: Container(
+                        width: 62,
+                        height: double.infinity,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            // Electrical Repair Icon
+                            Container(
+                              margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
+                              padding: EdgeInsets.fromLTRB(13, 8, 14, 9),
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                gradient: LinearGradient(
+                                  begin: Alignment(0, -1),
+                                  end: Alignment(0.742, 1),
+                                  colors: <Color>[
+                                    Colors.red,
+                                    Colors.yellow,
+                                  ],
+                                  stops: <double>[0.271, 1],
+                                ),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Color(0x3f000000),
+                                    offset: Offset(2, 2),
+                                    blurRadius: 2,
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                          child: Center(
-                            child: SizedBox(
-                              width: 35,
-                              height: 45,
-                              child: Image.asset(
-                                'assets/images/home_assets/electrical_icon.png',
-                                width: 35,
-                                height: 45,
+                              child: Center(
+                                child: SizedBox(
+                                  width: 35,
+                                  height: 45,
+                                  child: Image.asset(
+                                    'assets/images/home_assets/electrical_icon.png',
+                                    width: 35,
+                                    height: 45,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
+                            // Electrical Repair Text
+                            Container(
+                              constraints: BoxConstraints(
+                                maxWidth: 55,
+                              ),
+                              child: Text(
+                                'Perbaikan Listrik',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontFamily: 'Poppins',
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.5,
+                                  color: Colors.grey[600],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          constraints: BoxConstraints(
-                            maxWidth: 55,
-                          ),
-                          child: Text(
-                            'Perbaikan Listrik',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: 10,
-                              fontWeight: FontWeight.w500,
-                              height: 1.5,
-                              color: Colors.grey[600],
-                            ),
-                          ),
-                        )
-                      ],
+                      ),
                     ),
                   ),
 
-                  //Pumbling Section
+                  // Plumbing Section
                   Container(
-                    padding: EdgeInsets.fromLTRB(23, 0, 0, 0),
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                     height: double.infinity,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Plumbing Section
                         Container(
                           margin: EdgeInsets.fromLTRB(0, 0, 23, 0),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              // Handle Plumbing button press
+                            },
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,
                             ),
@@ -309,6 +335,7 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
+                                  // Plumbing Icon
                                   Container(
                                     margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
                                     padding: EdgeInsets.fromLTRB(
@@ -345,6 +372,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                   ),
+                                  // Plumbing Text
                                   Container(
                                     constraints: BoxConstraints(
                                       maxWidth: 61,
@@ -367,74 +395,84 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
 
-                        //Service AC section
+                        // Service AC section
                         Container(
                           width: 62,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
-                                padding: EdgeInsets.fromLTRB(
-                                    20.13, 17.97, 20.13, 17.97),
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  gradient: LinearGradient(
-                                    begin: Alignment(0, -1),
-                                    end: Alignment(0.742, 1),
-                                    colors: <Color>[
-                                      Colors.red,
-                                      Colors.yellow,
+                          child: TextButton(
+                            onPressed: () {
+                              // Handle Service AC button press
+                            },
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                // Service AC Icon
+                                Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 0, 11),
+                                  padding: EdgeInsets.fromLTRB(
+                                      20.13, 17.97, 20.13, 17.97),
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    gradient: LinearGradient(
+                                      begin: Alignment(0, -1),
+                                      end: Alignment(0.742, 1),
+                                      colors: <Color>[
+                                        Colors.red,
+                                        Colors.yellow,
+                                      ],
+                                      stops: <double>[0.271, 1],
+                                    ),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: Color(0x3f000000),
+                                        offset: Offset(2, 2),
+                                        blurRadius: 2,
+                                      ),
                                     ],
-                                    stops: <double>[0.271, 1],
                                   ),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Color(0x3f000000),
-                                      offset: Offset(2, 2),
-                                      blurRadius: 2,
-                                    )
-                                  ],
-                                ),
-                                child: Center(
-                                  child: SizedBox(
-                                    width: 21,
-                                    height: 26,
-                                    child: Image.asset(
-                                      'assets/images/home_assets/ac_icon.png',
-                                      width: 21.73,
-                                      height: 26.07,
+                                  child: Center(
+                                    child: SizedBox(
+                                      width: 21,
+                                      height: 26,
+                                      child: Image.asset(
+                                        'assets/images/home_assets/ac_icon.png',
+                                        width: 21.73,
+                                        height: 26.07,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                              Container(
-                                constraints: BoxConstraints(
-                                  maxWidth: 61,
-                                ),
-                                child: Text(
-                                  'Service AC',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontFamily: 'Poppins',
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.5,
-                                    color: Colors.grey[600],
+                                // Service AC Text
+                                Container(
+                                  constraints: BoxConstraints(
+                                    maxWidth: 61,
+                                  ),
+                                  child: Text(
+                                    'Service AC',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.5,
+                                      color: Colors.grey[600],
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        )
+                        ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
 
